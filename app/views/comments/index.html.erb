@@ -1,0 +1,10 @@
+<h1>Welcome to MicroReddit</h1>
+<ul id="Comments">
+  <% @comments.each do |comment| %>
+    <li>
+      <%= link_to comment.body, comment_path(comment) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Comment", new_comment_path, class: "new_comment" %> <br>

@@ -1,0 +1,6 @@
+<p><%= @comment.body %></p>
+<%= link_to "delete", comment_path(@comment), method: :delete, data: {confirm: "Really delete the Comment? Are you sure? You might be making a mistake. Consider your options."}
+ %> <br>
+ <%= link_to "edit", edit_comment_path(@comment) %><br>
+
+<%= link_to '<< Back to Comments List', comments_path%>

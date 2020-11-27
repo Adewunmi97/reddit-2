@@ -1,0 +1,10 @@
+<h1>Welcome to MicroReddit</h1>
+<ul id="Posts">
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.name, post_path(post) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Post", new_post_path, class: "new_post" %> <br>
